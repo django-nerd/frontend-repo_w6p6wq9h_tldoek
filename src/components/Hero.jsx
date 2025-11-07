@@ -7,10 +7,10 @@ export default function Hero({ onExplore }) {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-[#0D0D0D] text-white">
-      {/* 3D Spline Scene */}
+      {/* 3D Spline Scene - interactive, modern background */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/EF7JOSsHLk16Tlw9/scene.splinecode"
+          scene="https://prod.spline.design/VyGeZv58yuk8j7Yy/scene.splinecode"
           aria-label="Futuristic 3D hero animation"
           style={{ width: '100%', height: '100%' }}
         />
@@ -22,21 +22,21 @@ export default function Hero({ onExplore }) {
         background: 'radial-gradient(60% 60% at 50% 40%, rgba(0,191,255,0.25) 0%, rgba(255,0,127,0.15) 35%, rgba(0,0,0,0.0) 70%)'
       }} />
 
-      {/* Centered content */}
+      {/* Centered content - ensure no Poppins font is used */}
       <div ref={wrapperRef} className="relative z-10 flex h-full w-full items-center justify-center">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-4 bg-gradient-to-r from-[#EAEAEA] via-white to-[#EAEAEA] bg-clip-text text-4xl font-semibold text-transparent sm:text-6xl"
+            className="mb-4 bg-gradient-to-r from-[#EAEAEA] via-white to-[#EAEAEA] bg-clip-text text-4xl font-semibold text-transparent sm:text-6xl font-sans"
           >
             Muhammad Taufik Hidayat
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
-            className="mx-auto mb-10 max-w-2xl text-sm leading-relaxed text-[#EAEAEA]/80 sm:text-base"
+            className="mx-auto mb-10 max-w-2xl text-sm leading-relaxed text-[#EAEAEA]/80 sm:text-base font-sans"
           >
             Backend Developer berfokus pada arsitektur sistem, optimasi performa, dan integrasi API. Membangun aplikasi web berbasis Laravel, Node.js, dan MySQL dengan keamanan serta efisiensi sebagai prioritas.
           </motion.p>
@@ -63,7 +63,7 @@ export default function Hero({ onExplore }) {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.8, transition: { delay: 0.6 } }}
-            className="mt-6 text-xs text-[#EAEAEA]/60"
+            className="mt-6 text-xs text-[#EAEAEA]/60 font-sans"
           >
             Interaktif: seret/klik elemen 3D lalu mulai jelajah portofolio.
           </motion.p>
